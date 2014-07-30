@@ -1,6 +1,5 @@
 #pragma once
 
-#include <algorithm>
 #include <vector>
 
 namespace NB {
@@ -15,7 +14,8 @@ namespace NB {
     std::vector<number_t> features;
   };
 
-  const number_t gaussian(const number_t&);
+  const number_t gaussian(const number_t &, const number_t &,
+                              const number_t &);
 
   class NaiveBayes {
    private:

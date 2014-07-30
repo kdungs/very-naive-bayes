@@ -5,7 +5,7 @@
 #include "runningstats.hpp"
 
 namespace NB {
-  number_t gaussian(const number_t &x, const number_t &mu,
+  const number_t gaussian(const number_t &x, const number_t &mu,
                     const number_t &sigma) {
     return 1. / std::sqrt(2 * M_PI) / sigma *
            std::exp(-.5 * std::pow((x - mu) / sigma, 2));
