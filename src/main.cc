@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
   std::tie(events, labels) = load_data(filename_train, num_features);
   nb.train(events, labels);
 
-  // Testing (write results to file, actual evaluation is done via Python)
+  // Prediction
   std::tie(events, labels) = load_data(filename_predict, num_features);
   for (const auto &e : events) {
     std::cout << nb.predict(e) << std::endl;
