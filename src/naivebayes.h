@@ -14,8 +14,7 @@ namespace NB {
     std::vector<number_t> features;
   };
 
-  const number_t gaussian(const number_t &, const number_t &,
-                              const number_t &);
+  const number_t gaussian(const number_t &, const number_t &, const number_t &);
 
   class NaiveBayes {
    private:
@@ -34,4 +33,4 @@ namespace NB {
      void train(const std::vector<Event>&, const std::vector<label_t>&);
      const label_t predict(const Event&) const;
   };
-};
+}
