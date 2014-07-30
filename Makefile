@@ -5,15 +5,15 @@ all: evaluation
 
 main: main.cc naivebayes.cc
 
-testfiles: maketestdata.py
+testfiles: scripts/maketestdata.py
 	mkdir -p data
-	./maketestdata.py
+	scripts/maketestdata.py
 
 predictions.dat: testfiles main
 	./main
 
-evaluation: predictions.dat evaluate.py
-	./evaluate.py
+evaluation: predictions.dat scripts/evaluate.py
+	scripts/evaluate.py
 
 clean:
 	rm -f main
